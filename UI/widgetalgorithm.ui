@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WidgetAlgorithm</class>
+ <widget class="QWidget" name="WidgetAlgorithm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>207</width>
+    <height>128</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame_3">
+     <property name="styleSheet">
+      <string notr="true">QFrame{background-color: rgb(94, 94, 94); color:rgb(255,255,255);}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>6</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="styleSheet">
+         <string notr="true">QFrame{ background-color:rgba(0,0,0,0)}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_name">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Name</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="styleSheet">
+         <string notr="true">QFrame{ background-color:rgba(0,0,0,0)}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_loadData">
+           <property name="toolTip">
+            <string>Load Training Data</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/load.png</normaloff>:/Images/load.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_visual">
+           <property name="toolTip">
+            <string>Plot Data</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/plot.png</normaloff>:/Images/plot.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_editParams">
+           <property name="toolTip">
+            <string>Edit Model Parameters</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/edit.png</normaloff>:/Images/edit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_trainModel">
+           <property name="toolTip">
+            <string>Train Model</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/run.png</normaloff>:/Images/run.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_saveModel">
+           <property name="toolTip">
+            <string>Save Model</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/save.png</normaloff>:/Images/save.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_4">
+        <property name="styleSheet">
+         <string notr="true">QFrame{ background-color:rgba(0,0,0,0)}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_loadModel">
+           <property name="toolTip">
+            <string>Load Model</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/upload.png</normaloff>:/Images/upload.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_Predict">
+           <property name="toolTip">
+            <string>Predict</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255);}
+QToolButton:disabled{background-color:rgb(0, 0, 0); }</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/test.png</normaloff>:/Images/test.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_5">
+        <property name="styleSheet">
+         <string notr="true">QFrame{ background-color:rgba(0,0,0,0)}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>2</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QProgressBar" name="progressBar_progress">
+           <property name="styleSheet">
+            <string notr="true">QProgressBar{color:rgb(255,255,255);}</string>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_abort">
+           <property name="toolTip">
+            <string>Abort</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{ background-color:rgb(255, 0, 0)}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Images.qrc">
+             <normaloff>:/Images/stop.png</normaloff>:/Images/stop.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
