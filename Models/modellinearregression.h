@@ -32,6 +32,12 @@ public:
     void setModel(const mat &value);
 
 
+    uword getXAxisIndex() const;
+    void setXAxisIndex(uword value);
+
+    uword getYAxisIndex() const;
+    void setYAxisIndex(uword value);
+
 private:
     field<std::string> features;
     mat data;
@@ -40,6 +46,8 @@ private:
     int featureCount;
     int predictColumn;
     mat model;
+    uword xAxisIndex;
+    uword yAxisIndex;
 
 };
 

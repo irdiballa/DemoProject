@@ -12,6 +12,7 @@ CONFIG += c++17
 
 SOURCES += \
     Models/modellinearregression.cpp \
+    UI/dialogaxisselector.cpp \
     UI/widgetalgorithm.cpp \
     UI/widgetchart.cpp \
     UI/widgettable.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 
 HEADERS += \
     Models/modellinearregression.h \
+    UI/dialogaxisselector.h \
     UI/widgetalgorithm.h \
     UI/widgetchart.h \
     UI/widgettable.h \
@@ -29,6 +31,7 @@ HEADERS += \
     mainwindow.h \
 
 FORMS += \
+    UI/dialogaxisselector.ui \
     UI/widgetalgorithm.ui \
     UI/widgetchart.ui \
     UI/widgettable.ui \

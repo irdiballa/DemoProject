@@ -14,6 +14,7 @@
 #include "Models/modellinearregression.h"
 #include "Workers/loaddataworker.h"
 #include "UI/widgettable.h"
+#include "UI/dialogaxisselector.h"
 
 
 #include <iostream>

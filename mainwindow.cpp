@@ -80,26 +80,17 @@ void MainWindow::on_visualize(){
 
         LinearRegressionWidget->setBusyLoadProgress(true);
         QStringList features;
-        QVector<QVector<QVariant>> allData;
 
         for(uword i=0;i<LinearRegressionData->getFeatures().size();i++){
             features.append(QString::fromStdString(LinearRegressionData->getFeatures().at(i)));
         }
 
-        int xaxis = 0,yaxis = 0;
-        bool ok;
-        QString item = QInputDialog::getItem(this,tr("Features") ,
-                                             tr("Select feature for horizontal axis:"), features, 0, false, &ok);
-        if (ok && !item.isEmpty()){
-            xaxis = features.indexOf(item);
-        }
+        DialogAxisSelector *selector = new DialogAxisSelector(LinearRegressionData,this);
+        selector->exec();
 
 
-        item = QInputDialog::getItem(this, tr("Features"),
-                                             tr("Select feature for vertical axis:"), features, 0, false, &ok);
-        if (ok && !item.isEmpty()){
-            yaxis = features.indexOf(item);
-        }
+        uword xaxis = LinearRegressionData->getXAxisIndex();
+        uword yaxis = LinearRegressionData->getYAxisIndex();
 
         if((LinearRegressionData->getData().n_cols > xaxis) && (LinearRegressionData->getData().n_cols > yaxis)){
             std::vector<double> x = arma::conv_to< std::vector<double> >::from(LinearRegressionData->getData().col(xaxis));

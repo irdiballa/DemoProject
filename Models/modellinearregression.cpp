@@ -67,6 +67,26 @@ void ModelLinearRegression::setModel(const mat &value)
 
 }
 
+uword ModelLinearRegression::getXAxisIndex() const
+{
+    return xAxisIndex;
+}
+
+void ModelLinearRegression::setXAxisIndex(uword value)
+{
+    xAxisIndex = value;
+}
+
+uword ModelLinearRegression::getYAxisIndex() const
+{
+    return yAxisIndex;
+}
+
+void ModelLinearRegression::setYAxisIndex(uword value)
+{
+    yAxisIndex = value;
+}
+
 void ModelLinearRegression::setPredictedValues(const vec &value)
 {
     predictedValues = value;
