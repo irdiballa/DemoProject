@@ -15,6 +15,7 @@
 #include "Workers/loaddataworker.h"
 #include "UI/widgettable.h"
 #include "UI/dialogaxisselector.h"
+#include "UI/dialogfileselector.h"
 
 
 #include <iostream>

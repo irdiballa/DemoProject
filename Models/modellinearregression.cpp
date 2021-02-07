@@ -87,6 +87,16 @@ void ModelLinearRegression::setYAxisIndex(uword value)
     yAxisIndex = value;
 }
 
+QString ModelLinearRegression::getDataFile() const
+{
+    return dataFile;
+}
+
+void ModelLinearRegression::setDataFile(const QString &value)
+{
+    dataFile = value;
+}
+
 void ModelLinearRegression::setPredictedValues(const vec &value)
 {
     predictedValues = value;

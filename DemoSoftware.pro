@@ -13,6 +13,7 @@ CONFIG += c++17
 SOURCES += \
     Models/modellinearregression.cpp \
     UI/dialogaxisselector.cpp \
+    UI/dialogfileselector.cpp \
     UI/widgetalgorithm.cpp \
     UI/widgetchart.cpp \
     UI/widgettable.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
 HEADERS += \
     Models/modellinearregression.h \
     UI/dialogaxisselector.h \
+    UI/dialogfileselector.h \
     UI/widgetalgorithm.h \
     UI/widgetchart.h \
     UI/widgettable.h \
@@ -32,6 +34,7 @@ HEADERS += \
 
 FORMS += \
     UI/dialogaxisselector.ui \
+    UI/dialogfileselector.ui \
     UI/widgetalgorithm.ui \
     UI/widgetchart.ui \
     UI/widgettable.ui \
@@ -44,6 +47,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    Examples/RealEstate.csv \
+    Examples/basketball.csv \
+    Examples/crickets.csv \
     Images/edit.png \
     Images/load.png \
     Images/run.png \
@@ -54,7 +60,7 @@ DISTFILES += \
     Resources/Images/save.png
 
 RESOURCES += \
-    Images.qrc
+    resources.qrc
 
 unix|win32: LIBS += -L$$PWD/External/lib_win64/ -llibopenblas
 

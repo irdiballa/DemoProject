@@ -147,6 +147,12 @@
             <property name="currentIndex">
              <number>0</number>
             </property>
+            <widget class="QWidget" name="tab_table">
+             <attribute name="title">
+              <string>Table</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_5"/>
+            </widget>
             <widget class="QWidget" name="tab_chart">
              <attribute name="title">
               <string>Chart</string>
@@ -168,12 +174,6 @@
                <number>0</number>
               </property>
              </layout>
-            </widget>
-            <widget class="QWidget" name="tab_table">
-             <attribute name="title">
-              <string>Table</string>
-             </attribute>
-             <layout class="QVBoxLayout" name="verticalLayout_5"/>
             </widget>
            </widget>
           </item>

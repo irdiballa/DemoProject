@@ -38,6 +38,9 @@ public:
     uword getYAxisIndex() const;
     void setYAxisIndex(uword value);
 
+    QString getDataFile() const;
+    void setDataFile(const QString &value);
+
 private:
     field<std::string> features;
     mat data;
@@ -48,6 +51,7 @@ private:
     mat model;
     uword xAxisIndex;
     uword yAxisIndex;
+    QString dataFile;
 
 };
 

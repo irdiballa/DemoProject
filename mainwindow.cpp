@@ -33,27 +33,21 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete LinearRegressionData;
 }
 
 void MainWindow::on_loadData(){
 
     if(sender() == LinearRegressionWidget){
 
-        QString fileName = "";
-        fileName = QFileDialog::getOpenFileName(this,
-            tr("Open File"), "/home", tr("CSV Files (*.csv)"));
-
-        if(fileName == ""){
-            QMessageBox msgBox;
-            msgBox.setText("No file was selected.");
-            msgBox.setInformativeText("Please Select a .csv file to load");
-            msgBox.exec();
-            return;
-        }
+        DialogFileSelector *dlg = new DialogFileSelector(LinearRegressionData,this);
+        connect(dlg,&DialogFileSelector::accepted,dlg,&DialogFileSelector::deleteLater);
+        connect(dlg,&DialogFileSelector::rejected,dlg,&DialogFileSelector::deleteLater);
+        dlg->exec();
 
         LinearRegressionWidget->setBusyLoadProgress();
         QThread *WorkThread  = new QThread();
-        LoadDataWorker *massDemon   = new LoadDataWorker(fileName,LinearRegressionData);
+        LoadDataWorker *massDemon   = new LoadDataWorker(LinearRegressionData->getDataFile(),LinearRegressionData);
         massDemon->moveToThread(WorkThread);
 
         connect(WorkThread, &QThread::started, massDemon, &LoadDataWorker::process);
@@ -86,6 +80,8 @@ void MainWindow::on_visualize(){
         }
 
         DialogAxisSelector *selector = new DialogAxisSelector(LinearRegressionData,this);
+        connect(selector,&DialogAxisSelector::accepted,selector,&DialogAxisSelector::deleteLater);
+        connect(selector,&DialogAxisSelector::rejected,selector,&DialogAxisSelector::deleteLater);
         selector->exec();
 
 

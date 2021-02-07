@@ -2,14 +2,11 @@
     <qresource prefix="/">
         <file>Images/edit.png</file>
         <file>Images/load.png</file>
+        <file>Images/plot.png</file>
         <file>Images/run.png</file>
         <file>Images/save.png</file>
-        <file>Images/plot.png</file>
-        <file>Images/test.png</file>
         <file>Images/stop.png</file>
+        <file>Images/test.png</file>
         <file>Images/upload.png</file>
-        <file>Examples/basketball.csv</file>
-        <file>Examples/crickets.csv</file>
-        <file>Examples/RealEstate.csv</file>
     </qresource>
 </RCC>
