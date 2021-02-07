@@ -101,16 +101,18 @@ void MainWindow::on_visualize(){
             yaxis = features.indexOf(item);
         }
 
+        if((LinearRegressionData->getData().n_cols > xaxis) && (LinearRegressionData->getData().n_cols > yaxis)){
+            std::vector<double> x = arma::conv_to< std::vector<double> >::from(LinearRegressionData->getData().col(xaxis));
+            std::vector<double> y = arma::conv_to< std::vector<double> >::from(LinearRegressionData->getData().col(yaxis));
 
-        std::vector<double> x = arma::conv_to< std::vector<double> >::from(LinearRegressionData->getData().col(xaxis));
-        std::vector<double> y = arma::conv_to< std::vector<double> >::from(LinearRegressionData->getData().col(yaxis));
+            QVector<double> xData=  QVector<double>(x.begin(),x.end());
+            QVector<double> yData=  QVector<double>(y.begin(),y.end());
 
-        QVector<double> xData=  QVector<double>(x.begin(),x.end());
-        QVector<double> yData=  QVector<double>(y.begin(),y.end());
+            ChartWidget->addData(LinearRegressionData->getFeatures()[xaxis],LinearRegressionData->getFeatures()[yaxis],xData,yData);
+            TableWidget->addData(features,LinearRegressionData->getData());
+            LinearRegressionWidget->setBusyLoadProgress(false);
+        }
 
-        ChartWidget->addData(LinearRegressionData->getFeatures()[xaxis],LinearRegressionData->getFeatures()[yaxis],xData,yData);
-        TableWidget->addData(features,LinearRegressionData->getData());
-        LinearRegressionWidget->setBusyLoadProgress(false);
     }else{
 
     }
@@ -144,12 +146,21 @@ void MainWindow::on_editParameters(){
 void MainWindow::on_trainModel(){
     if(sender() == LinearRegressionWidget){
 
+
         mat X = LinearRegressionData->getData();
+        if(!(LinearRegressionData->getData().n_cols > LinearRegressionData->getPredictColumn())){
+            return;
+        }
         vec y = X.col(LinearRegressionData->getPredictColumn());
         X.shed_col(LinearRegressionData->getPredictColumn());
         vec ones = vec(LinearRegressionData->getSampleCount(),fill::ones);
 
         X.insert_cols(0,ones);
+
+        if(X.n_rows != y.size()){
+            return;
+        }
+
         vec model = pinv(X.t() * X) * (X.t() * y);
         LinearRegressionData->setModel(model);
 
@@ -206,9 +217,16 @@ void MainWindow::on_loadModel(){
 void MainWindow::on_predict(){
     if(sender() == LinearRegressionWidget){
         mat X = LinearRegressionData->getData();
+        if(!(LinearRegressionData->getData().n_cols > LinearRegressionData->getPredictColumn())){
+            return;
+        }
         X.shed_col(LinearRegressionData->getPredictColumn());
         vec ones = vec(LinearRegressionData->getSampleCount(),fill::ones);
         X.insert_cols(0,ones);
+
+        if(X.n_cols != LinearRegressionData->getModel().n_rows){
+            return;
+        }
         vec predictedValues = X * LinearRegressionData->getModel();
 
         LinearRegressionData->setPredictedValues(predictedValues);

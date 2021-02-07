@@ -162,7 +162,7 @@
             <string>Load Training Data</string>
            </property>
            <property name="styleSheet">
-            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+            <string notr="true">QToolButton{ background-color:#ffffff}</string>
            </property>
            <property name="text">
             <string>...</string>
@@ -185,7 +185,7 @@
             <string>Plot Data</string>
            </property>
            <property name="styleSheet">
-            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+            <string notr="true">QToolButton{ background-color:#ffffff}</string>
            </property>
            <property name="text">
             <string>...</string>
@@ -208,7 +208,7 @@
             <string>Edit Model Parameters</string>
            </property>
            <property name="styleSheet">
-            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+            <string notr="true">QToolButton{ background-color:#ffffff}</string>
            </property>
            <property name="text">
             <string>...</string>
@@ -231,7 +231,7 @@
             <string>Train Model</string>
            </property>
            <property name="styleSheet">
-            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+            <string notr="true">QToolButton{ background-color:#ffffff}</string>
            </property>
            <property name="text">
             <string>...</string>
@@ -254,7 +254,7 @@
             <string>Save Model</string>
            </property>
            <property name="styleSheet">
-            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+            <string notr="true">QToolButton{ background-color:#ffffff}</string>
            </property>
            <property name="text">
             <string>...</string>
@@ -333,7 +333,7 @@
             <string>Load Model</string>
            </property>
            <property name="styleSheet">
-            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255)}</string>
+            <string notr="true">QToolButton{ background-color:#ffffff}</string>
            </property>
            <property name="text">
             <string>...</string>
@@ -352,12 +352,14 @@
          </item>
          <item>
           <widget class="QToolButton" name="toolButton_Predict">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="toolTip">
             <string>Predict</string>
            </property>
            <property name="styleSheet">
-            <string notr="true">QToolButton{ background-color:rgb(255, 255, 255);}
-QToolButton:disabled{background-color:rgb(0, 0, 0); }</string>
+            <string notr="true">QToolButton{ background-color:#ffffff}</string>
            </property>
            <property name="text">
             <string>...</string>

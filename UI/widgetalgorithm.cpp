@@ -7,6 +7,7 @@ WidgetAlgorithm::WidgetAlgorithm(QString name,QWidget *parent) :
 {
     ui->setupUi(this);
     ui->label_name->setText(name);
+
 }
 
 WidgetAlgorithm::~WidgetAlgorithm()
